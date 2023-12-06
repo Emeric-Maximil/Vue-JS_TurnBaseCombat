@@ -24,7 +24,9 @@ Vue.createApp({
             }else{
                 this.coundown--;
             }
+
             this.tour++; 
+
             this.opponentLife -= 10;
             this.attackPlayer();
         },
@@ -34,7 +36,9 @@ Vue.createApp({
         specialAttackAdversaire(){
             this.disableSpecialAttack = true;
             this.coundown = 3;
+
             this.tour++;
+            
             this.opponentLife -= 30;
             this.attackPlayer();
         },
@@ -73,6 +77,8 @@ Vue.createApp({
             }else{
                 this.playerLife += 50;
             }
+
+            this.tour++;
             this.attackPlayer();
         }
     },

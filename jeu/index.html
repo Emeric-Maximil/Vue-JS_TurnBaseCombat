@@ -11,10 +11,19 @@
 </head>
 <body id="app">
           
-    <div v-if="isOnFight" style="width: 70%; height: 50px; border : solid; margin: 5% 0;">
-        <div :style="{backgroundColor: 'red', width: opponentLife + '%', height: '100%'}">{{opponentLife}} / 100</div>
-    </div>
+    <div v-if="isOnFight" 
 
+    style="width: 70%; 
+            height: 50px; 
+            border : solid;"
+    >
+
+
+        <div :style="{backgroundColor: 'red', width: opponentLife + '%', height: '100%'}">{{opponentLife}} / 100</div>
+
+
+    </div>
+    <p v-if="isOnFight">{{tour}}</p>
     <div v-if="isOnFight" style="width: 70%; height: 50px; border : solid; margin: 5% 0;">
         <div :style="{backgroundColor: 'chartreuse', width: playerLife + '%', height: '100%'}">{{playerLife}} / 100</div>
     </div>
